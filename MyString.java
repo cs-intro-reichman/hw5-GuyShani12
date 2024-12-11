@@ -52,7 +52,7 @@ public class MyString {
          for (int i = 0; i < str2.length(); i++)
          {
             if (countChar(str2, str1.charAt(j)) > 0){
-                if (countChar(str2, str1.charAt(j)) != countChar(str1, str1.charAt(j))){
+                if (countChar(str2, str1.charAt(j)) < countChar(str1, str1.charAt(j))){
                     return false;
                 }
                 j++;
