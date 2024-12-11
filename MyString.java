@@ -125,6 +125,7 @@ public class MyString {
             {
                 if (str1.charAt(j) == str2.charAt(i)){
                     str1 = str1.substring(0, j) + str1.substring(j+1);
+                    break;
                 }
             }
         }
