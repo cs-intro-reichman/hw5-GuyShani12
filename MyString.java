@@ -119,33 +119,16 @@ public class MyString {
      * @return a string consisting of str1 minus all the characters of str2
      */
     public static String remove(String str1, String str2) {
-        String newStr = "";
         for (int i = 0; i < str2.length(); i++)
         { 
-            boolean b = true;
-            for (int j = 0; j < str2.length(); j++)
+            for (int j = 0; j < str1.length(); j++)
             {
-                if (str1.charAt(i) == str2.charAt(j)){
-                    removeCharinIndex(str2, str2.charAt(j));
-                    b = false;
+                if (str1.charAt(j) == str2.charAt(i)){
+                    str1 = str1.substring(0, j) + str1.substring(j+1);
                 }
             }
-            if (b == true){
-                newStr += str1.charAt(i);
-            }
         }
-        return newStr;
-    }
-
-    public static String removeCharinIndex (String str, int n){
-        String newStr = "";
-        for (int i = 0; i < str.length(); i++)
-        {
-            if (i != n){
-                newStr += str.charAt(i);
-            }
-        }
-        return newStr;
+        return str1;
     }
 
     /**
