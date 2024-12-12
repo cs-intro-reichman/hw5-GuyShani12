@@ -53,9 +53,6 @@ public class Scrabble {
 			if (word == DICTIONARY[i]){
 				return true;
 			}
-			else {
-				i++;
-			}
 		}
 		return false;
 	}
@@ -111,7 +108,7 @@ public class Scrabble {
 
 			int currentScore = 0;
 			if (input.equals(".")){
-			break;
+				break;
 			}
 			if (MyString.subsetOf(input, hand) && isWordInDictionary(input)){
 				score += wordScore(input);
